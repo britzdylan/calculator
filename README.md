@@ -1,3 +1,3 @@
 # calculator
 Calculator App built with Vanilla Javascript.
-https://britzdylan.github.io/calculator/index.html.
+https://britzdylan.github.io/calculator/
