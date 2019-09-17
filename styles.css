@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:600|Roboto:400');
+
+/* ===== Type Scale & Layout ===== */
+html {font-size: 16px;}
+
+body {
+  background-color: rgb(248, 248, 248);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333;
+  margin: 0;
+  padding: 50px;
+}
+
+p {margin-bottom: 1.25em;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+  margin-bottom: 3%; 
+}
+
+h2 {font-size: 2.441em;}
+
+h3 {font-size: 1.953em;}
+
+h4 {font-size: 1.563em;}
+
+h5 {font-size: 1.25em;}
+
+small, .text_small {font-size: 0.8em;}
+
+#ciMain {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* ==========  */
+
+/* ===== Main Header ===== */
+
+#mainHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 5%;
+}
+
+.ciLogo {
+    text-decoration: none;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    font-weight: 800;
+    
+    
+}
+
+.ciLogo > img {
+    margin: 0 auto;
+}
+
+/* ========== */
+
+/* ===== Calculator ===== */
+
+.calcBody {
+    width: 560px;
+    margin: 0 auto;
+    padding: 2% 10px;
+    background: #FFFFFF;
+    box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 35px;
+}
+
+.calcOutput {
+    text-align: right;
+    padding: 0 25px;
+    color: #6F00CC;
+    height: 60px;
+    overflow: hidden;
+    margin: 5%;
+    background-color: rgb(243, 243, 243);
+}
+
+.calcButtons {
+    display: grid;
+    grid-column-gap: 3px;
+    grid-template-columns: repeat(4, 137px);
+    align-content: center;
+    margin: auto auto;
+   
+}
+
+.calcButtons > div {
+    padding: 0;
+    margin: 2px;
+    width: 100%;
+    text-align: center;
+    height: 137px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+}
+
+.btnNumber {
+    background: #6F00CC;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+
+.btnNumber:hover {
+    background: #9B64C9;
+    transform: scale(0.95);
+}
+
+.btnNumber:active {
+    background: #380067;
+}
+.btnMath {
+    background: #33FF80;
+    color: black;
+    transition: all 0.3s ease-out;
+}
+
+.btnMath:hover {
+    background: #26C462;
+    transform: scale(0.95);
+}
+
+.btnMath:active {
+    background: #83FFB2;
+}
+
+.btnFunc {
+    background: #FFA61A;
+    color: black;
+    transition: all 0.3s ease-out;
+}
+
+.btnFunc:hover {
+    background: #F8C26D;
+    transform: scale(0.95);
+}
+
+.btnFunc:active {
+    background: #E48C00;
+}
+
+/* ========== */
+
+
+/* ===== switch ===== */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 5px #380067;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #33FF80;;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background: #380067;
+    box-shadow: inset 0px 0px 5px #000000;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 5px #33FF80;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color:#6509B3;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* ========== */
+
+  /* ===== media queries ===== */
+
+  @media only screen and (max-width: 669px) {
+    .calcBody {
+          width: 95%;
+    }
+
+    .calcButtons {
+        display: grid;
+        grid-column-gap: 3px;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .calcButtons > div {
+      height: 95%;
+    }
+
+    body {
+      padding: 5% 2%;
+    }
+
+    .ciLogo {
+      width: 40px;
+      font-size: 1rem;
+    }
+
+    .siteName {
+      display: none;
+    }
+
+    #mainHeader {
+      margin: 8% 5% 8% 5%;
+  
+    }
+  }
+
