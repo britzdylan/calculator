@@ -43,14 +43,19 @@ function calcValue() {
 
 for (let i = 0; i < 10; i++) {
     btnNumber[i].addEventListener("click", onNumberPress);
-   
+   //add the event of click to all the div's containing numbers.
+   //we call our function onNumberPress
 }
 
 for (let i = 0; i < btnMath.length; i++) {
     btnMath[i].addEventListener("click", onNumberPress);
+    //add the event of click to all the div's with math values.
+   //we call our function onNumberPress
 }
 
 btnClear.addEventListener("click", resetAll);
+//add the event of click to the C button(div) and call resetAll
 btnFunc.addEventListener("click", calcValue);
+//add the event of click to the = button(div) and call calcValue
 document.addEventListener('keydown', keyEvent);
-
+////add the event of click to the document for any keypress of the keyboard
