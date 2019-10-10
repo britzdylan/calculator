@@ -1,9 +1,9 @@
-const btnNumber = document.getElementsByClassName("btnNumber");
-const btnMath = document.getElementsByClassName("btnMath");
-const outputValue = document.getElementById("outputValue")
-const btnClear = document.getElementById("btnClear");
-const btnFunc = document.getElementById("btnFunc");
-let finalValue = undefined;
+const btnNumber = document.getElementsByClassName("btnNumber"); //selecting all the number buttons
+const btnMath = document.getElementsByClassName("btnMath"); //selecting all the math buttons
+const outputValue = document.getElementById("outputValue") //select the field to display our output
+const btnClear = document.getElementById("btnClear"); //select the C button
+const btnFunc = document.getElementById("btnFunc"); //select the euquals button
+let finalValue = undefined; //create a final value that is undefined
 
 function resetAll() {
     finalValue = undefined;
